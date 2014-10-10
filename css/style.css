@@ -15,11 +15,10 @@ a {
 }
 
 a:hover {
-	font-weight: bold;
+	text-decoration: underline;
 }
 
 #banner {
-  background-color: #0c68af;
   position: relative;
   width: inherit;
 }
@@ -33,14 +32,12 @@ a:hover {
 }
 
 #banner h1 {
-	padding-top: 40px;
-	padding-left: 20px;
-	height: 80px;
+	background: #0c68af url(../img/logo.png) no-repeat 20px 40px;
+	height: 130px;
 }
 
 #banner ul {
   list-style-type: none;
-  background-color: #08406c;
   margin: 0;
   padding: 0;
 }
@@ -51,13 +48,19 @@ a:hover {
 }
 
 #nav-main {
+	background-color: #08406c;
 	border-top: 1px solid black;
 	position: absolute;
 	bottom: 0px;
 	width: inherit;
 }
 
+#nav-main ul {
+	margin: 5px 0 5px 5px;
+}
+
 #nav-other {
+	background-color: #08406c;
 	border-bottom: 1px solid black;
 	position: absolute;
 	width: inherit;
