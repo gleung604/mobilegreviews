@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 1000px;
+	height: 1000px;
+	border: 1px solid black;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#banner {
+  position: relative;
+  width: inherit;
+}
+
+#banner a:link, a:visited {
+	color: white;
+}
+
+.active {
+	background-color: #0c68af;
+}
+
+#banner h1 {
+	background: #0c68af url(../img/logo.png) no-repeat 20px 40px;
+	height: 130px;
+}
+
+#banner ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-main li, #nav-other li {
+	display: inline;
+	padding: 0 10px 0 0;
+}
+
+#nav-main {
+	background-color: #08406c;
+	border-top: 1px solid black;
+	position: absolute;
+	bottom: 0px;
+	width: inherit;
+}
+
+#nav-main ul {
+	margin: 5px 0 5px 5px;
+}
+
+#nav-other {
+	background-color: #08406c;
+	border-bottom: 1px solid black;
+	position: absolute;
+	width: inherit;
+	text-align: right;
+	top: 0px;
+	right: 0px;
+}
+
+#search-box {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+footer {
+  background-color: #08406c;
+  color: white;
+  position: absolute;
+  width: inherit;
+  bottom: 0;
+  left: 0;
+}
