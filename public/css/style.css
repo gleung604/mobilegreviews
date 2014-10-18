@@ -1,36 +1,55 @@
-* {
-	font-family: "Verdana";
-	margin: 0;
-	padding: 0;
+html, body {
+	height: 100%;
 }
 
 body {
-	width: 1000px;
-	height: 1000px;
-	border: 1px solid black;
+	font-family: "Verdana";
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
+	min-width: 800px;
+	height: 100%;
+	background-color: white;
 	position: relative;
+	overflow-x: hidden;
 }
 
 a {
 	text-decoration: none;
 }
 
-#banner {
-  width: 100%;
+#wrapper {
+	min-height: 100%;
 }
 
-#banner a:link, a:visited {
+#banner {
+	position: relative;
+}
+
+#banner a:link, #banner a:visited {
 	color: white;
 }
 
 #banner h1 {
-	background: #0c68af url(../img/logo.png) no-repeat 20px 20px;
+	margin: 0;
+	background: #0c68af url(../img/logo.png) no-repeat 3020px 20px;
 	height: 80px;
+	padding-left: 3000px;
+	margin-left: -3000px;
+	padding-right: 3000px;
+	margin-right: -3000px;
 }
 
 #banner ul {
   margin: 0;
   padding: 0;
+}
+
+nav {
+	padding-left: 3000px;
+	margin-left: -3000px;
+	padding-right: 3000px;
+	margin-right: -3000px;
 }
 
 #nav-main li, #nav-other li {
@@ -79,11 +98,39 @@ a {
 	right: 50px;
 }
 
+#content {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+#featured {
+	text-align: center;
+	overflow: hidden;
+	padding: 20px;
+	border: 1px solid black;
+}
+
+#featured img {
+	float: left;
+	border: 1px solid black;
+}
+
+#featured div {
+	text-align: left;
+	border: 1px solid black;
+}
+
 footer {
   background-color: #08406c;
   color: white;
-  position: absolute;
   width: 100%;
-  bottom: 0;
-  left: 0;
+  padding-left: 3000px;
+	margin-left: -3000px;
+	padding-right: 3000px;
+	margin-right: -3000px;
+	height: 20px;
+	position: relative;
+	margin-top: -20px;
 }
