@@ -8,10 +8,10 @@ body {
 	padding: 0;
 	width: 80%;
 	min-width: 800px;
-	height: 100%;
 	background-color: white;
 	position: relative;
 	overflow-x: hidden;
+	display: table;
 }
 
 a {
@@ -19,7 +19,8 @@ a {
 }
 
 #wrapper {
-	min-height: 100%;
+	display: table-row;
+	height: 100%;
 }
 
 #banner {
@@ -110,16 +111,51 @@ nav {
 	overflow: hidden;
 	padding: 20px;
 	border: 1px solid black;
+	position: relative;
+}
+
+#featured h3 {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: #0c68af;
+	color: white;
 }
 
 #featured img {
+	clear: left;
 	float: left;
-	border: 1px solid black;
+	width: 47.5%;
 }
 
 #featured div {
+	float: left;
 	text-align: left;
+	margin-left: 20px;
+	width: 47.5%;
+	height: 300px;
+	position: relative;
 	border: 1px solid black;
+}
+
+#featured div h2 {
+	margin: 0;
+}
+
+#featured div a {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#first, #second, #third {
+	float: left;
+	width: 29%;
+	padding: 20px;
+}
+
+#articles img {
+	width: 100%;
 }
 
 footer {
@@ -132,5 +168,4 @@ footer {
 	margin-right: -3000px;
 	height: 20px;
 	position: relative;
-	margin-top: -20px;
 }
