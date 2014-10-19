@@ -4,10 +4,10 @@ html, body {
 
 body {
 	font-family: "Verdana";
+	font-size: 12px;
 	margin: 0 auto;
 	padding: 0;
-	width: 80%;
-	min-width: 800px;
+	width: 850px;
 	background-color: white;
 	position: relative;
 	overflow-x: hidden;
@@ -107,33 +107,30 @@ nav {
 }
 
 #featured {
-	text-align: center;
-	overflow: hidden;
 	padding: 20px;
-	border: 1px solid black;
 	position: relative;
 }
 
-#featured h3 {
+h3 {
+	display: block;
 	float: left;
+	width: 100px;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 5px;
 	background-color: #0c68af;
 	color: white;
 }
 
 #featured img {
-	clear: left;
 	float: left;
-	width: 47.5%;
 }
 
-#featured div {
+#featured .right {
 	float: left;
 	text-align: left;
 	margin-left: 20px;
-	width: 47.5%;
-	height: 300px;
+	width: 54.5%;
+	height: 250px;
 	position: relative;
 	border: 1px solid black;
 }
@@ -148,13 +145,45 @@ nav {
 	left: 0;
 }
 
+#featured .image {
+	clear: left;
+	float: left;
+	width: 42.5%;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+#articles .image {
+	clear: left;
+	height: 160px;
+	overflow: hidden;
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+}
+
+#featured .body {
+	margin-top: 10px;
+	height: 155px;
+	overflow: hidden;
+}
+
+#articles .body {
+	margin-top: 10px;
+	height: 100px;
+	overflow: hidden;
+}
+
 #first, #second, #third {
 	float: left;
-	width: 29%;
+	width: 28.5%;
 	padding: 20px;
 }
 
-#articles img {
+img {
 	width: 100%;
 }
 
