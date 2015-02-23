@@ -43,8 +43,10 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+group :test do
+  gem 'minitest-reporters'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
