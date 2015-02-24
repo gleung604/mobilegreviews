@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:success] = "Article created!"
+      flash[:success] = "Article created"
       redirect_to root_url
     else
       render 'new'
@@ -16,6 +16,20 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find_by_id(params[:id])
+    if @article.update_attributes(article_params)
+      flash[:success] = "Article updated"
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   private

@@ -1,9 +1,5 @@
-  <div id="wrapper">
 	<div id="content">
 	  <aside id="featured" class="article">
-	  	<% flash.each do |message| %>
-	  		<%= message %>
-	  	<% end %>
 	    	<h3 class="category">Featured</h3>
 	    	<div class="image">
 	    	<%= image_tag(@articles.first.picture.url, alt: "featured article") if @articles.first.picture? %>
@@ -12,13 +8,13 @@
 	    	<h2><%= @articles.first.title %></h2>
 	    	<p>By Author on Date in Tags</p>
 	    	<p class="body"><%= @articles.first.body %></p>
-	    	<a href="#">read more...</a>
+	    	<%= link_to "read more...", @articles.first %>
 	    	</div>
 	  </aside>
 	  <section id="articles">
 	  	<% @articles.each_with_index do |article, index| %>
 	  		<% if index != 0 %>
-	  			<section id="first">
+	  			<section class="article-columns">
 	  			<h3 class="category">Recent</h3>
 	  			<div class="image">
 	    		<%= image_tag(article.picture.url, alt: "featured article") if article.picture? %>
@@ -27,11 +23,10 @@
 	    		<h2><%= article.title %></h2>
 	    		<p>By Author on Date in Tags</p>
 	    		<p class="body"><%= article.body %></p>
-	    		<a href="#">read more...</a>
+	    		<%= link_to "read more...", article %>
 	    		</div>
 	    		</section>
 	  		<% end %>
 	  	<% end %>
 	  </section>
-	</div>
 	</div>

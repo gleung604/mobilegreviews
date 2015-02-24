@@ -2,7 +2,7 @@
 
 <body>
 
-<%= @article.body %>
-<%= image_tag @article.picture.url if @article.picture? %>
+<p><%= image_tag @article.picture.url if @article.picture? %></p>
+<p><%= @article.body %></p>
 
 </body>
