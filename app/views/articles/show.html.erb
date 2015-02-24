@@ -1,0 +1,8 @@
+<h1><%= @article.title %></h1>
+
+<body>
+
+<%= @article.body %>
+<%= image_tag @article.picture.url if @article.picture? %>
+
+</body>
