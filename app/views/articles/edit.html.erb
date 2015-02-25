@@ -8,8 +8,8 @@
 
   <li><%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %></li>
 
-  <li>
-  <%= f.submit "Submit" %>
-  </li>
+  <li><%= f.text_field :all_tags, placeholder: "tag1, tag2, tag3, etc" %></li>
+
+  <li><%= f.submit "Submit" %></li>
   </ul>
 <% end %>

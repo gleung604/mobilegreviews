@@ -7,7 +7,7 @@ class ArticleTest < ActiveSupport::TestCase
   end
 
   test "should be valid" do
-	assert @article.valid? 	
+    assert @article.valid? 	
   end
 
   test "title should be present" do

@@ -1,5 +1,8 @@
 	<div id="content">
 	  <aside id="featured" class="article">
+	  	<% if @articles.empty? %>
+	  		<p>No articles found.</p>
+	  	<% else %>
 	    	<h3 class="category">Featured</h3>
 	    	<div class="image">
 	    	<%= image_tag(@articles.first.picture.url, alt: "featured article") if @articles.first.picture? %>
@@ -10,6 +13,7 @@
 	    	<p class="body"><%= @articles.first.body %></p>
 	    	<%= link_to "read more...", @articles.first %>
 	    	</div>
+	    <% end %>
 	  </aside>
 	  <section id="articles">
 	  	<% @articles.each_with_index do |article, index| %>
