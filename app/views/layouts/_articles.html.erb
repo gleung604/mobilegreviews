@@ -1,0 +1,19 @@
+<section class="articles">
+  <% @articles.each do |article| %>
+    <section class="article-columns">
+      <h3 class="category">Recent</h3>
+      <div class="image">
+        <%= image_tag(article.picture.url, alt: "recent article") if article.picture? %>
+      </div>
+      <div class="right">
+        <h2><%= article.title %></h2>
+        <p>
+          By Author on Date in Tags
+        </p>
+        <p class="body"><%= article.body %></p>
+        <%= link_to "read more...", article,
+        { :class => "read-more" } %>
+      </div>
+    </section>
+  <% end %>
+</section>

@@ -16,6 +16,10 @@ class Article < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
 
+  def date
+    self.updated_at.to_date.strftime("%B %d, %Y")
+  end
+
   private
 
     # Validates the size of an uploaded picture

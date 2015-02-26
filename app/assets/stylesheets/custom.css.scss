@@ -10,6 +10,10 @@ li {
   margin: 10px;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-family: "Verdana";
   font-size: 12px;
@@ -153,7 +157,7 @@ h3 {
   margin: 0;
 }
 
-#featured div a {
+#featured div .read-more {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -167,7 +171,7 @@ h3 {
   overflow: hidden;
 }
 
-#articles .image {
+.articles .image {
   clear: left;
   height: 160px;
   overflow: hidden;
@@ -194,10 +198,6 @@ h3 {
   float: left;
   width: 28.5%;
   padding: 20px;
-}
-
-#content img {
-  width: 100%;
 }
 
 /* footer */
