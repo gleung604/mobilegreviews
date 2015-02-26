@@ -1,2 +1,1 @@
-<% @articles = @tag.articles %>
-<%= render 'layouts/articles' %>
+<%= render partial: "layouts/articles", locals: {articles: @tag.articles} %>

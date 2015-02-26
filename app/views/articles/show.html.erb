@@ -4,5 +4,6 @@
 
 <p><%= image_tag @article.picture.url if @article.picture? %></p>
 <p><%= @article.body %></p>
+<p><%= link_to "Edit", edit_article_path(@article) %> 
 
 </body>
