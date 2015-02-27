@@ -10,10 +10,6 @@ li {
   margin: 10px;
 }
 
-img {
-  width: 100%;
-}
-
 body {
   font-family: "Verdana";
   font-size: 12px;
@@ -198,6 +194,15 @@ h3 {
   float: left;
   width: 28.5%;
   padding: 20px;
+}
+
+.user-links {
+  clear: both;
+  float: right;
+}
+
+.article-thumbs {
+  width: 100%;
 }
 
 /* footer */

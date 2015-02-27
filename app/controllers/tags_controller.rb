@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
 
   def show
-    @tag = Tag.find(params[:id])
+    @tag = Tag.where(name: params[:name]).first
   end
 end

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
   resources :articles
-  resources :tags, only: [:show]
+  resources :tags, only: [:show], param: :name
 end

@@ -5,6 +5,10 @@ class Tag < ActiveRecord::Base
   validates :name, presence: true, 
                    uniqueness: { case_sensitive: false }
 
+  def to_param
+    name
+  end
+
   def downcase_name
     self.name = name.downcase
   end

@@ -1,13 +1,12 @@
 	<div id="content">
+		<p><%= link_to "Add article", new_article_path, { class: "user-links" } %></p>
 	  <aside id="featured" class="article">
 	  	<% articles = @articles %>
-	  	<% if articles.empty? %>
-	  		<p>No articles found.</p>
-	  	<% else %>
+	  	<% unless articles.empty? %>
 	  		<% unless @featured.nil? %>
 	    		<h3 class="category">Featured</h3>
 	    		<div class="image">
-	    		<%= image_tag(@featured.picture.url, alt: "featured article") if @featured.picture? %>
+	    		<%= image_tag(@featured.picture.url, alt: "featured article", :class => "article-thumbs") if @featured.picture? %>
 	    		</div>
 	    		<div class="right">
 	    		<h2><%= @featured.title %></h2>
