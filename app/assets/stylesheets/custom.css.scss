@@ -123,7 +123,7 @@ nav {
 
 #featured {
   padding: 20px;
-  position: relative;
+  clear: both;
 }
 
 h3 {
@@ -184,7 +184,7 @@ h3 {
   overflow: hidden;
 }
 
-#articles .body {
+.articles .body {
   margin-top: 10px;
   height: 100px;
   overflow: hidden;
@@ -203,6 +203,19 @@ h3 {
 
 .article-thumbs {
   width: 100%;
+}
+
+.pagination {
+  float: left;
+  clear: both;
+  li {
+    display: inline;
+  }
+}
+
+.clear {
+  float: left;
+  clear: both;
 }
 
 /* footer */

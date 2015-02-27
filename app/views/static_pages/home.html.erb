@@ -24,5 +24,6 @@
 	    		<% end %>
 	    <% end %>
 	  </aside>
-	  <%= render partial: "layouts/articles", locals: {articles: articles} %>
+	  <%= render partial: "layouts/articles", locals: {articles: articles[0..5]} %>
+	  <%= link_to "<< older entries", articles_path, { class: "clear" } %>
 	</div>
