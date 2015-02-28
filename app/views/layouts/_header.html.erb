@@ -11,8 +11,8 @@
     <nav id="nav-main">
       <ul>
         <li><%= link_to "HOME", root_url, { :class => "active" } %></li>
-        <li><%= link_to "iOS", tag_url(Tag.where(name: "ios").first) %></li>
-        <li><%= link_to "ANDROID", tag_url(Tag.where(name: "android").first) %></li>
+        <li><%= link_to "iOS", tag_url(Tag.new(:name => "ios")) %></li>
+        <li><%= link_to "ANDROID", tag_url(Tag.new(:name => "android")) %></li>
         <li><a href="#">POPULAR</a></li>
         <li><a href="#">TOP REVIEWS</a></li>
         <li><a href="#">FORUMS</a></li>

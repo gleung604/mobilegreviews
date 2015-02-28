@@ -1,1 +1,3 @@
+<% unless @tag.nil? %>
 <%= render partial: "layouts/articles", locals: {articles: @tag.articles} %>
+<% end %>
