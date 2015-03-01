@@ -3,8 +3,12 @@
       <ul>
         <li><a href="#">about us</a></li>
         <li><a href="#">contact us</a></li>
-        <li><%= link_to "register", signup_path %></li>
-        <li><a href="#">login</a></li>
+        <% if logged_in? %>
+          <li><%= link_to "logout", logout_path, method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "register", signup_path %></li>
+          <li><%= link_to "login", login_path %></li>
+        <% end %>
       </ul>
     </nav>
     <h1><a href="index.html"></a></h1>
