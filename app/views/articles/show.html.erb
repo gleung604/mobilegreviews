@@ -1,4 +1,8 @@
-<p><%= link_to "Edit", edit_article_path(@article), { class: "user-links" } %> 
+<p>
+<%= link_to "Edit", edit_article_path(@article) %> | 
+<%= link_to "Delete", @article, method: :delete, data: { confirm: "Delete article?" } %>
+</p>
+
 <h1><%= @article.title %></h1>
 
 <body>
