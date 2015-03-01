@@ -1,5 +1,7 @@
 	<div id="content">
+		<% if logged_in? %>
 		<p><%= link_to "Add article", new_article_path, { class: "user-links" } %></p>
+		<% end %>
 	  <aside id="featured" class="article">
 	  	<% articles = @articles %>
 	  	<% unless articles.empty? %>

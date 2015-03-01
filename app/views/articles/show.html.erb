@@ -1,7 +1,9 @@
+<% if logged_in? %>
 <p>
 <%= link_to "Edit", edit_article_path(@article) %> | 
 <%= link_to "Delete", @article, method: :delete, data: { confirm: "Delete article?" } %>
 </p>
+<% end %>
 
 <h1><%= @article.title %></h1>
 
