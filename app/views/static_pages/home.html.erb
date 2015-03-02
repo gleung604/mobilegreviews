@@ -1,5 +1,5 @@
 	<div id="content">
-		<% if current_user.admin? %>
+		<% if logged_in? && current_user.admin? %>
 		<p><%= link_to "Add article", new_article_path, { class: "user-links" } %></p>
 		<% end %>
 	  <aside id="featured" class="article">

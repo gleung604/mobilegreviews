@@ -5,7 +5,6 @@ class Article < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   validates :title, presence: true
   validates :body, presence: true
-  validates :picture, presence: true
   validates :user, presence: true
   validate :picture_size
 
