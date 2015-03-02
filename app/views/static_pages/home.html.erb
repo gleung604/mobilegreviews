@@ -13,7 +13,7 @@
 	    		<div class="right">
 	    		<h2><%= @featured.title %></h2>
 	    		<p>
-	    		By Author on <%= @featured.date %> in 
+	    		By <%= link_to @featured.user.name, @featured.user %> on <%= @featured.date %> in 
 	    		<% @featured.tags.each do |tag| %>
 	    		<%= link_to tag.name, tag %>
 	    		<% end %>

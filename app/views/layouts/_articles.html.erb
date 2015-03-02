@@ -9,7 +9,8 @@
         <div class="article-preview">
         <h2><%= article.title %></h2>
         <p>
-          By Author on <%= article.date %> in 
+          By <%= link_to article.user.name, article.user %> 
+          on <%= article.date %> in 
           <% article.tags.each do |tag| %>
           <%= link_to tag.name, tag %>
           <% end %>
