@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :logged_in_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.all
@@ -10,6 +12,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article created"
       redirect_to root_url
@@ -46,5 +49,11 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :body, :picture, :all_tags)
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @article = Article.find(params[:id])
+      redirect_to(root_url) unless current_user?(@article.user)
     end
 end

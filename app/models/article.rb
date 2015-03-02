@@ -1,9 +1,11 @@
 class Article < ActiveRecord::Base
+  belongs_to :user
   has_many :article_tags, :dependent => :destroy
   has_many :tags, through: :article_tags
   mount_uploader :picture, PictureUploader
   validates :title, presence: true
   validates :body, presence: true
+  validates :user, presence: true
   validate :picture_size
 
   def all_tags=(names)

@@ -19,4 +19,9 @@ class ArticleTest < ActiveSupport::TestCase
     @article.body = ""
     assert_not @article.valid?
   end
+
+  test "user should be present" do
+    @article.user = nil
+    assert_not @article.valid?
+  end
 end

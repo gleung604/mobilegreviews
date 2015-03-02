@@ -1,1 +1,5 @@
-<%= @user.name %>, <%= @user.email %>
+<% articles = @user.articles.paginate(page: params[:page], per_page: 6) %>
+
+<%= render partial: "layouts/articles", locals: {articles: @user.articles} %>
+
+<%= will_paginate articles %>
