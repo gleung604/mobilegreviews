@@ -22,6 +22,11 @@ class Article < ActiveRecord::Base
     self.updated_at.to_date.strftime("%B %d, %Y")
   end
 
+  def self.search(search)
+    search_condition = "%#{search.downcase}%"
+    where("lower(title) LIKE ? OR lower(body) LIKE ?", search_condition, search_condition)
+  end
+
   private
 
     # Validates the size of an uploaded picture

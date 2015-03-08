@@ -22,7 +22,5 @@
         <li><%= link_to "FORUMS", forums_url %></li>
       </ul>
     </nav>
-    <form id="search-box">
-      <input id="search" type="search" placeholder="Search...">
-    </form>
+    <%= render :partial => 'articles/search' %>
   </header>
