@@ -1,3 +1,5 @@
-<% unless @tag.nil? %>
-<%= render partial: "layouts/articles", locals: {articles: @tag.articles} %>
+<% if @tag.nil? || @tag.articles.empty? %>
+  <p>No articles found.</p>
+<% else %>
+  <%= render partial: "layouts/articles", locals: {articles: @tag.articles} %>
 <% end %>

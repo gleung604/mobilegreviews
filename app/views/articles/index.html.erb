@@ -1,5 +1,7 @@
 <% articles = @articles.paginate(page: params[:page], per_page: 6) %>
-
-<%= render partial: "layouts/articles", locals: {articles: articles} %>
-
-<%= will_paginate articles %>
+<% if articles.empty? %>
+  <p>No articles found.</p>
+<% else %>
+  <%= render partial: "layouts/articles", locals: {articles: articles} %>
+  <%= will_paginate articles %>
+<% end %>
