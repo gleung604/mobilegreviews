@@ -14,4 +14,11 @@ class TagTest < ActiveSupport::TestCase
     @tag.name = ""
     assert_not @tag.valid?
   end
+
+  test "name should be alphanumeric" do
+    @tag.name = "two words"
+    assert_not @tag.valid?
+    @tag.name = "!@#%^&*()"
+    assert_not @tag.valid?
+  end
 end

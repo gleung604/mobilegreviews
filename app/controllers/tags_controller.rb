@@ -1,6 +1,8 @@
 class TagsController < ApplicationController
 
   def show
-    @tag = Tag.where(name: params[:name]).first
+    unless Tag.where(name: params[:name]).empty?
+      @tag = Tag.where(name: params[:name]).first
+    end
   end
 end

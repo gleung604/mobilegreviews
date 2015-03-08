@@ -27,5 +27,9 @@
 	    <% end %>
 	  </aside>
 	  <%= render partial: "layouts/articles", locals: {articles: articles[0..5]} %>
-	  <%= link_to "<< older entries", articles_path, { class: "clear" } %>
+	  <% if articles.empty? %>
+	  	<p>No articles found.</p>
+	  <% else %>
+	  	<%= link_to "<< older entries", articles_path, { class: "clear" } %>
+	  <% end %>
 	</div>
