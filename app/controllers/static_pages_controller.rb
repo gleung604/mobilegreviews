@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 
     if Tag.where(name: "featured").any?
       if Tag.where(name: "featured").first.articles.any?
-        @featured = Tag.where(name: "featured").first.articles.first
+        @featured = Tag.where(name: "featured").first.articles.last
       end
     end
   end

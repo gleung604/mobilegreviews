@@ -3,7 +3,7 @@ require 'test_helper'
 class ArticleTest < ActiveSupport::TestCase
   
   def setup
-  	@article = articles(:monster_hunter)
+  	@article = Article.new(title: "title", body: "body", user: users(:john))
   end
 
   test "should be valid" do

@@ -12,4 +12,8 @@
 <p><%= image_tag @article.picture.url if @article.picture? %></p>
 <p><%= @article.body %></p>
 
+<% if @article.review? %>
+<p><%= @article.score %></p>
+<% end %>
+
 </body>

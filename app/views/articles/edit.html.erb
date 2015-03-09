@@ -1,15 +1,1 @@
-<%= form_for(@article, html: { multipart: true }) do |f| %>
-  <ul>
-  <li><%= f.label :title %></li>
-  <li><%= f.text_field :title %></li>
-
-  <li><%= f.label :body %></li>
-  <li><%= f.text_area :body, :size => '50x10' %></li>
-
-  <li><%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png' %></li>
-
-  <li><%= f.text_field :all_tags, placeholder: "tag1, tag2, tag3, etc" %></li>
-
-  <li><%= f.submit "Submit" %></li>
-  </ul>
-<% end %>
+<%= render partial: 'article' %>

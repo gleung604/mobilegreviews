@@ -5,16 +5,28 @@ class ArticlesController < ApplicationController
     if params[:search]
       @articles = Article.search(params[:search])
     else
-      @articles = Article.all
+      if params[:type]
+        @articles = Review.all.order(score: :desc)
+      else
+        @articles = Article.all.order(updated_at: :desc)
+      end
     end
   end
 
   def new
-    @article = Article.new
+    if params[:type]
+      @article = Review.new
+    else
+      @article = Article.new
+    end
   end
 
   def create
-    @article = Article.new(article_params)
+    if params[:type]
+      @article = Review.new(review_params)
+    else
+      @article = Article.new(article_params)
+    end
     @article.user = current_user
     if @article.save
       flash[:success] = "Article created"
@@ -34,7 +46,10 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find_by_id(params[:id])
-    if @article.update_attributes(article_params)
+    if @article.type && @article.update_attributes(review_params)
+      flash[:success] = "Article updated"
+      redirect_to @article
+    elsif @article.update_attributes(article_params)
       flash[:success] = "Article updated"
       redirect_to @article
     else
@@ -52,6 +67,10 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :body, :picture, :all_tags)
+    end
+
+    def review_params
+      params.require(:review).permit(:title, :body, :picture, :all_tags, :score)
     end
 
     # Confirms the correct user.

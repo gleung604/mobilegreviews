@@ -1,6 +1,9 @@
 	<div id="content">
 		<% if logged_in? && current_user.admin? %>
-		<p><%= link_to "Add article", new_article_path, { class: "user-links" } %></p>
+		<p>
+		<%= link_to "Add article", new_article_path, { class: "user-links" } %>
+		<%= link_to "Add review", new_review_path, { class: "user-links" } %>
+		</p>
 		<% end %>
 	  <aside id="featured" class="article">
 	  	<% articles = @articles %>
